@@ -1,4 +1,4 @@
-from flyquery import flyquery as flyq
+#from flyquery import flyquery as flyq
 import pygsheets
 
 gc = pygsheets.authorize()
