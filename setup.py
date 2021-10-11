@@ -11,13 +11,13 @@ def read(fname):
 
 setup(
     name="flyquery",
-    version="0.2",
+    version="0.9",
     author="Dennis Goldschmidt",
     author_email="dennis.goldschmidt@neuro.fchampalimaud.org",
     description=("FlyQuery API to read out Google Sheets, query FlyBase stock numbers, and write FlyBase data back into Sheets."),
     license="GPLv3",
     keywords=[],
-    url="https://pypi.python.org/pypi/pytrack",
+    url="",
     packages=['flyquery'],
     python_requires='>=3.6',
     long_description=read('README.md'),
@@ -26,10 +26,12 @@ setup(
         "Operating System :: MacOS :: MacOS X",
         "Topic :: Utilities",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.9",
     ],
-    platforms=['Windows10Pro', 'MacOSX-HighSierra'],
-    install_requires=['pygsheets', 'requests', 'bs4', 'pandas', 'numpy', 'IPython'],
-    entry_points={
+    platforms=['Windows10Pro', 'MacOSX-BigSur'],
+    install_requires=['pygsheets', 'requests', 'bs4', 'pandas', 'numpy'],
+    entry_points={'console_scripts': [
+            'flyquery = flyquery.main:main',
+        ],
     },
 )
